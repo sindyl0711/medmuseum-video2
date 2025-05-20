@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>影片牆</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    html, body {
+      margin: 0;
+      padding: 0;
+      font-family: sans-serif;
+      background-color: #fff;
+      color: #333;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      padding: 40px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+    .video-card {
+      background: #68A799;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+    .video-card:hover {
+      transform: scale(1.02);
+    }
+    .video-card img {
+      width: 100%;
+      display: block;
+    }
+    .video-info {
+      padding: 16px;
+    }
+    .video-info h3 {
+      margin: 0 0 8px;
+      font-size: 1.2rem;
+      color: #fff;
+    }
+    .video-info p {
+      margin: 0;
+      font-size: 1rem;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="grid">
+    <div class="video-card" onclick="window.open('https://www.youtube.com/watch?v=YTD976VZ7bY', '_blank')">
+      <img src="https://img.youtube.com/vi/YTD976VZ7bY/hqdefault.jpg" alt="吳嘉苓老師導覽">
+      <div class="video-info">
+        <h3>吳嘉苓老師導覽</h3>
+        <p>各方專家與策展人一同介紹展覽核心概念</p>
+      </div>
+    </div>
+    <div class="video-card" onclick="window.open('https://www.youtube.com/watch?v=BXqBWP0z3HA', '_blank')">
+      <img src="https://img.youtube.com/vi/BXqBWP0z3HA/hqdefault.jpg" alt="洪文玲老師導覽">
+      <div class="video-info">
+        <h3>洪文玲老師導覽</h3>
+        <p>專家導覽與展品摘要介紹</p>
+      </div>
+    </div>
+    <div class="video-card" onclick="window.open('https://www.youtube.com/watch?v=oDQFsT2ZEN0', '_blank')">
+      <img src="https://img.youtube.com/vi/oDQFsT2ZEN0/hqdefault.jpg" alt="廖小熊老師紀錄">
+      <div class="video-info">
+        <h3>廖小熊老師紀錄</h3>
+        <p>專業設計師視角看展覽</p>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
