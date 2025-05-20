@@ -78,19 +78,6 @@
       </div>
     </div>
   </div>
-<div id="iframe-pusher" style="height: 2000px;"></div>
-  <script>
-  function adjustPusherHeight() {
-    const pusher = document.getElementById('iframe-pusher');
-    const fullHeight = document.documentElement.scrollHeight;
-    pusher.style.height = (fullHeight + 50) + 'px';
-  }
 
-  window.addEventListener('load', adjustPusherHeight);
-  window.addEventListener('resize', adjustPusherHeight);
-
-  const observer = new MutationObserver(adjustPusherHeight);
-  observer.observe(document.body, { childList: true, subtree: true });
-</script>
 </body>
 </html>
