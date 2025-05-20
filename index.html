@@ -15,14 +15,33 @@
       background-color: #68A799;
       color: #333;
     }
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 20px;
-      padding: 40px 20px;
-      max-width: 1200px;
-      margin: auto;
-    }
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: auto;
+  overflow: hidden; /* 防止桌機時溢出 */
+}
+
+@media (max-width: 768px) {
+  .grid {
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    gap: 16px;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    padding: 20px;
+  }
+
+  .video-card {
+    flex: 0 0 80%;
+    scroll-snap-align: start;
+  }
+}
+
     .video-card {
       background: #68A799;
       border-radius: 12px;
